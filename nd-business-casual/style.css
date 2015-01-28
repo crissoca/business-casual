@@ -394,12 +394,12 @@ hr {
   margin: 0 auto 0;
 }
 
-footer {
+#colophon {
   background: #fff;
   background: rgba(255,255,255,0.9);
 }
 
-footer p {
+#colophon p {
   margin: 0;
   padding: 50px 0;
 }
@@ -481,4 +481,16 @@ footer p {
     display: table;
     clear: both;
   }
+}
+
+
+/*--------------------------------------------------------------
+9.0 Custom code for WP theme
+--------------------------------------------------------------*/
+.brand a,
+.brand a:hover {
+  color: #FFF;
+}
+.brand a:focus {
+  outline: 0 none;
 }
