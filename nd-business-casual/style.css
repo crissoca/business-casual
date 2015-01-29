@@ -29,14 +29,16 @@ and Blueprint http://www.blueprintcss.org/
 3.0 - Clearings
 4.0 - Widgets
 5.0 - Content
-	5.1 - Posts and pages
-	5.2 - Asides
-	5.3 - Comments
+  5.1 - Posts and pages
+  5.2 - Asides
+  5.3 - Comments
 6.0 - Infinite scroll
 7.0 - Media
-	7.1 - Captions
-	7.2 - Galleries
+  7.1 - Captions
+  7.2 - Galleries
 8.0 - Theme
+9.0 - Custom code for WP theme
+  9.1 - Structure
 --------------------------------------------------------------*/
 
 
@@ -45,53 +47,53 @@ and Blueprint http://www.blueprintcss.org/
 --------------------------------------------------------------*/
 /* Text meant only for screen readers */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar */
 }
 
 /*--------------------------------------------------------------
 2.0 Alignments
 --------------------------------------------------------------*/
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
 }
 
 .aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
+  clear: both;
+  display: block;
+  margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
@@ -109,8 +111,8 @@ and Blueprint http://www.blueprintcss.org/
 .site-content:after,
 .site-footer:before,
 .site-footer:after {
-	content: '';
-	display: table;
+  content: '';
+  display: table;
 }
 
 .clear:after,
@@ -119,24 +121,24 @@ and Blueprint http://www.blueprintcss.org/
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-	clear: both;
+  clear: both;
 }
 
 /*--------------------------------------------------------------
 4.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+  margin: 0 0 2.5em;
 }
 
 /* Make sure select elements fit in widgets */
 .widget select {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /* Search widget */
 .widget_search .search-submit {
-	display: none;
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -146,32 +148,32 @@ and Blueprint http://www.blueprintcss.org/
 5.1 Posts and pages
 --------------------------------------------------------------*/
 .sticky {
-	display: block;
+  display: block;
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+  margin: 0 0 4.5em;
 }
 
 .byline,
 .updated:not(.published) {
-	display: none;
+  display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+  display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+  margin: 1.5em 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+  clear: both;
+  margin: 0 0 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -179,18 +181,18 @@ and Blueprint http://www.blueprintcss.org/
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+  display: none;
 }
 
 /*--------------------------------------------------------------
 5.3 Comments
 --------------------------------------------------------------*/
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .bypostauthor {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -199,12 +201,12 @@ and Blueprint http://www.blueprintcss.org/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
+  display: none;
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -213,88 +215,88 @@ and Blueprint http://www.blueprintcss.org/
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
 }
 
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
 object {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /*--------------------------------------------------------------
 7.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+  margin-bottom: 1.5em;
+  max-width: 100%;
 }
 
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .wp-caption-text {
-	text-align: center;
+  text-align: center;
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+  margin: 0.8075em 0;
 }
 
 /*--------------------------------------------------------------
 7.2 Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
 }
 
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+  max-width: 50%;
 }
 
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+  max-width: 33.33%;
 }
 
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+  max-width: 25%;
 }
 
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+  max-width: 20%;
 }
 
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+  max-width: 16.66%;
 }
 
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+  max-width: 14.28%;
 }
 
 .gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
+  max-width: 12.5%;
 }
 
 .gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+  max-width: 11.11%;
 }
 
 .gallery-caption {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -324,7 +326,7 @@ p {
 }
 
 hr {
-  max-width: 400px;
+  max-width: 50%;
   border-color: #999999;
 }
 
@@ -343,6 +345,14 @@ hr {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 3px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  border: 0 none;
+}
+
+.dropdown-menu > li > a {
+  padding: 15px 20px
 }
 
 .img-full {
@@ -371,7 +381,7 @@ hr {
 
 .box {
   margin-bottom: 20px;
-  padding: 30px 15px;
+  padding: 30px;
   background: #fff;
   background: rgba(255,255,255,0.9);
 }
@@ -487,10 +497,49 @@ hr {
 /*--------------------------------------------------------------
 9.0 Custom code for WP theme
 --------------------------------------------------------------*/
+
 .brand a,
 .brand a:hover {
   color: #FFF;
+  text-decoration: none;
 }
+
 .brand a:focus {
   outline: 0 none;
+}
+
+/*--------------------------------------------------------------
+9.1 Structure
+--------------------------------------------------------------*/
+
+.entry-title{
+  margin-top: 0;
+}
+
+.entry-title a {
+  color: #333;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.entry-meta,
+.entry-meta a {
+  font-family: 'Josefin Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.entry-footer {
+  margin-top: 2.5em;
+}
+
+td, th {
+  padding: 0.5em 1.2em;
 }

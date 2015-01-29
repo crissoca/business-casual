@@ -44,7 +44,7 @@
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <?php wp_nav_menu( array( 'container_class' => 'collapse navbar-collapse', 'container_id' => 'bs-example-navbar-collapse-1', 'menu_class' => 'nav navbar-nav' ) ); ?>
+        <?php wp_nav_menu( array( 'menu' => 'primary', 'theme_location' => 'primary', 'container_class' => 'collapse navbar-collapse', 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 'walker' => new wp_bootstrap_navwalker() ) ); ?>
         <!-- /.navbar-collapse -->
       </div>
       <!-- /.container -->
